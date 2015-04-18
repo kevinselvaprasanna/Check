@@ -1,0 +1,20 @@
+#include<opencv2/opencv.hpp>
+#include<stdio.h>
+#include<iostream>
+#include<math.h>
+using namespace std;
+using namespace cv;
+
+int main()
+{
+	int c;
+	VideoCapture cap(0);
+
+	Mat img,hs;
+	namedWindow("out");
+	int s1=0,sd=0;
+
+	while(1)
+	{	
+	        cap>>img;
+	        cvtColor(img,hs,CV_BGR2HSV);
